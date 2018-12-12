@@ -11,7 +11,9 @@ module.exports = {
     '^.+\\.jsx?$': 'babel-jest'
   },
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1'
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '^plugin/(.*)$': '<rootDir>/plugin/$1',
+    '^root/(.*)$': '<rootDir>/$1'
   },
   snapshotSerializers: [
     'jest-serializer-vue'

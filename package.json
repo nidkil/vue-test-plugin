@@ -1,17 +1,57 @@
 {
-  "name": "vue-msal-new",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+  "name": "vue-test-plugin",
+  "version": "0.0.0",
+  "description": "Simple Vue 2 plugin to test Vue CLI 3 service build functionality",
+  "keywords": [
+    "Vue 2",
+    "Vue CLI 3",
+    "Vue 2 plugin",
+    "Test"
+  ],
+  "author": "nidkil <info@nidkil.com> (http://nidkil.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nidkil/vue-test-plugin.git"
   },
-  "dependencies": {
+  "homepage": "https://github.com/nidkil/vue-test-plugin.git",
+  "bugs": "https://github.com/nidkil/vue-test-plugin.git/issues",
+  "browser": "./dist/use-pkg-version.min.js",
+  "unpkg": "./dist/use-pkg-version.min.js",
+  "files": [
+    "dist",
+    "plugin",
+    "*.md"
+  ],
+  "scripts": {
+    "serve": "vue-cli-service serve --open",
+    "test:unit": "vue-cli-service test:unit",
+    "coverage": "npm run test -- --coverage",
+    "coveralls": "npm run coverage && cat ./coverage/lcov.info | coveralls",
+    "lint": "vue-cli-service lint -c .eslintrc.js --format codeframe plugin src tests",
+    "lint:fix": "vue-cli-service lint -c .eslintrc.js --fix --format codeframe plugin src tests",
+    "lint:error-only": "vue-cli-service lint -c .eslintrc.js --fix --quiet --format codeframe plugin src tests",
+    "lint:check": "vue-cli-service lint --print-config .eslintrc.js | eslint-config-prettier-check",
+    "cz:commit": "git cz",
+    "cz:retry": "git cz --retry",
+    "commitlint": "commitlint",
+    "commitlint:last": "commitlint --edit",
+    "git:first": "git rev-list HEAD | tail -n 1",
+    "git:last": "git rev-list HEAD | head -n 1",
+    "gendocs": "jsdoc -r -c jsdoc.config.json -d ./docs",
+    "readme:toc": "markdown-toc README.md -i --no-firsth1 --maxdepth=2 --bullets=-",
+    "prebuild": "npm run readme:toc",
+    "build": "vue-cli-service build --target lib --name TestPlugin --dest dist/plugin plugin/TestPlugin/index.js",
+    "postbuild": "vue-build-helper",
+    "release": "release-it --verbose"
+  },
+  "dependencies": {},
+  "peerDependencies": {
     "vue": "^2.5.17"
   },
   "devDependencies": {
+    "@commitlint/cli": "^7.2.1",
+    "@commitlint/config-conventional": "^7.1.2",
     "@vue/cli-plugin-babel": "^3.0.4",
     "@vue/cli-plugin-eslint": "^3.0.4",
     "@vue/cli-plugin-unit-jest": "^3.0.4",
@@ -21,8 +61,24 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "commitlint": "^7.2.1",
+    "cz-conventional-changelog": "^2.1.0",
     "eslint": "^5.8.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-vue": "^5.0.0-0",
+    "husky": "^1.2.0",
+    "jsdoc": "^3.5.5",
+    "markdown-toc": "^1.2.0",
+    "prettier": "^1.15.3",
+    "release-it": "^8.4.2",
+    "vue-build-helper": "^0.0.5",
     "vue-template-compiler": "^2.5.17"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

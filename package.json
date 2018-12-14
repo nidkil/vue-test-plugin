@@ -41,7 +41,7 @@
     "readme:toc": "markdown-toc README.md -i --maxdepth=2 --bullets=-",
     "prebuild": "npm run readme:toc",
     "build": "vue-cli-service build --target lib --name TestPlugin --dest dist/plugin plugin/TestPlugin/index.js",
-    "postbuild": "vue-build-helper",
+    "postbuild": "vue-build-helper all",
     "release": "release-it --verbose"
   },
   "dependencies": {

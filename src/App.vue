@@ -1,8 +1,10 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="/vue-test-plugin-logo.png" width="500">
-    <p style="color: red"><b>Using {{ $tst.pluginName }} v{{ $tst.version }}</b></p>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img alt="Vue logo" src="/vue-test-plugin-logo.png" width="500" />
+    <p style="color: red">
+      <b>Using {{ $tst.pluginName }} v{{ $tst.version }}</b>
+    </p>
+    <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>
 

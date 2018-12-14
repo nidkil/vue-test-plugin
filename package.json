@@ -31,23 +31,24 @@
     "lint": "vue-cli-service lint -c .eslintrc.js --format codeframe plugin src tests",
     "lint:fix": "vue-cli-service lint -c .eslintrc.js --fix --format codeframe plugin src tests",
     "lint:error-only": "vue-cli-service lint -c .eslintrc.js --fix --quiet --format codeframe plugin src tests",
+    "*** REMARK ***": "The following command is not working yet :-(",
     "lint:check": "vue-cli-service lint --print-config .eslintrc.js | eslint-config-prettier-check",
     "cz:commit": "git cz",
     "cz:retry": "git cz --retry",
-    "commitlint": "commitlint",
-    "commitlint:last": "commitlint --edit",
-    "git:first": "git rev-list HEAD | tail -n 1",
-    "git:last": "git rev-list HEAD | head -n 1",
+    "cl": "commitlint",
+    "cl:last": "commitlint --edit",
     "gendocs": "jsdoc -r -c jsdoc.config.json -d ./docs",
-    "readme:toc": "markdown-toc README.md -i --no-firsth1 --maxdepth=2 --bullets=-",
+    "readme:toc": "markdown-toc README.md -i --maxdepth=2 --bullets=-",
     "prebuild": "npm run readme:toc",
     "build": "vue-cli-service build --target lib --name TestPlugin --dest dist/plugin plugin/TestPlugin/index.js",
     "postbuild": "vue-build-helper",
     "release": "release-it --verbose"
   },
-  "dependencies": {},
+  "dependencies": {
+  },
   "peerDependencies": {
-    "vue": "^2.5.17"
+    "vue": "^2.5.21",
+    "vue-template-compiler": "^2.5.21"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.2.1",
@@ -57,7 +58,7 @@
     "@vue/cli-plugin-unit-jest": "^3.0.4",
     "@vue/cli-service": "^3.0.4",
     "@vue/eslint-config-standard": "^4.0.0",
-    "@vue/test-utils": "^1.0.0-beta.20",
+    "@vue/test-utils": "^1.0.0-beta.27",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
@@ -73,8 +74,7 @@
     "markdown-toc": "^1.2.0",
     "prettier": "^1.15.3",
     "release-it": "^8.4.2",
-    "vue-build-helper": "^0.0.5",
-    "vue-template-compiler": "^2.5.17"
+    "vue-build-helper": "^0.0.5"
   },
   "config": {
     "commitizen": {

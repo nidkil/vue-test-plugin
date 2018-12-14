@@ -4,8 +4,10 @@
 <p align="center" style="font-size: 2.0em"><b>vue-test-plugin</b></p>
 <p align="center" style="font-size: 0.5em">Simple Vue 2 plugin to test Vue CLI 3 service build functionality</p>
 
+[![NPM version](https://img.shields.io/npm/v/vue-test-plugin.svg)](https://www.npmjs.com/package/vue-test-plugin)
 [![Vue 2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 [![Vue CLI 3](https://img.shields.io/badge/vue%20cli-3-brightgreen.svg)](https://cli.vuejs.org/)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
 [![Hit count](http://hits.dwyl.com/nidkil/vue-test-plugin.svg)](http://hits.dwyl.com/dwyl/start-here)
 [![License MIT](https://img.shields.io/badge/license-mit-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -21,23 +23,30 @@ I am developing a Vue 2 plugin. During this process I ran into some hiccups gett
 
 Nothing to fancy, but it might be of help to others setting up a project for a Vue 2 plugin, so I will make it generally available. Enjoy!
 
-<details>
- <summary><strong>Table of Contents</strong> (click to expand)</summary>
- <!-- toc -->
-</details>
+<a name="toc">
+  <details>
+    <summary><strong>Table of Contents</strong> (click to expand)</summary>
+      <!-- toc -->
+  </details>
+</a>
 
 ## Installation
 
 ### Local
 
 Install as a `dependency` using [npm](https://www.npmjs.com/):
+
 ```bash
 npm install --save vue-test-plugin
 ```
+
 Or install using [yarn](https://yarnpkg.com):
+
 ```bash
 yarn add vue-test-plugin
 ```
+
+[Go to Table of Contents](#toc)
 
 ## Usage
 
@@ -47,13 +56,16 @@ Below the most important directories are explained.
 
 ```
 ├── vue-test-plugin
-│   ├── dist                            The build destination folder
-│   ├── plugin                          The source of the plugin
+│   ├── dist                            Build destination folder
+│   ├── plugin                          Source of the plugin
 │   ├── src                             An example app that uses the plugin
-│   │   └── plugin
-│   │       └── vue-test-plugin.js      Initializes the plugin
+│   │   ├── plugin
+│   │   │   └── vue-test-plugin.js      Initializes the plugin
+│   │   └── main.js                     Calls the plugin
 │   └── tests                           Unit tests for the plugin
 ```
+
+[Go to Table of Contents](#toc)
 
 ### Compiles and hot-reloads for development
 
@@ -77,6 +89,8 @@ In the example app the plugin can be referenced in two ways:
 2) Reference the compiled version in the `dist` folder.
 
 > **Caveat**: To use the compiled version babel needs an extra configuration option set (see tips & tricks). This is only needed when using the example app that is part of the repo or when using `npm link` or `yarn link`.
+
+[Go to Table of Contents](#toc)
 
 ### Compiles and minifies the plugin for production
 
@@ -103,6 +117,8 @@ npm run lint
 ```
 npm run test:unit
 ```
+
+[Go to Table of Contents](#toc)
 
 ## Tips & tricks
 
@@ -199,9 +215,13 @@ This comment of a [webpack issue](https://github.com/webpack/webpack/issues/4039
 
 I hope this helps someone and saves them (lots of) time.
 
+[Go to Table of Contents](#toc)
+
 ## Roadmap
 
-Currently nothing on the roadmap. Ideas?
+Currently there is nothing on the roadmap. Suggestions? Please submit an issue.
+
+[Go to Table of Contents](#toc)
 
 ## Contributing
 
@@ -214,9 +234,15 @@ We welcome pull requests! What follows is the simplified version of the contribu
 5. Push the branch: `git push origin my-new-feature`
 6. Submit a pull request :-)
 
-## Brag about it
+[Go to Table of Contents](#toc)
 
-Do you find this package useful? Then please brag about it to the world by Twitter, email, blog, Discord, Slack, forums, etc. etc.
+## Support & brag about us
+
+If you like this project, please support us by starring ⭐ [this](https://github.com/nidkil/vue-test-plugin) repository. Thx!
+
+Please let the world know about us! Brag about us using Twitter, email, blog, Discord, Slack, forums, etc. etc. Thx!
+
+[Go to Table of Contents](#toc)
 
 ## Author
 

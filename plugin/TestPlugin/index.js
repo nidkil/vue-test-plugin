@@ -8,7 +8,8 @@ const plugin = {
     options = Object.assign({}, optionsDefaults, options)
     const debug = options.debug || false
     // eslint-disable-next-line no-console
-    debug && console.log(`Installing ${pluginName} v${version}`, JSON.stringify(options, null, '\t'))
+    debug &&
+      console.log(`Installing ${pluginName} v${version}`, JSON.stringify(options, null, '\t'))
     // Mount the plugin on the Vue prototype, so that it can be accessed with this.$tst
     Vue.prototype.$tst = {
       pluginName,
@@ -26,7 +27,4 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export default plugin
 
-export {
-  pluginName,
-  version
-}
+export { pluginName, version }

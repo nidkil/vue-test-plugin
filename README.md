@@ -5,6 +5,8 @@
 <p align="center" style="font-size: 0.5em">Simple Vue 2 plugin to test Vue CLI 3 service build functionality</p>
 
 [![Build status](https://travis-ci.com/nidkil/vue-test-plugin.svg?branch=master)](https://travis-ci.com/nidkil/vue-test-plugin)
+[![Coverage Status](https://coveralls.io/repos/github/nidkil/vue-test-plugin/badge.svg)](https://coveralls.io/github/nidkil/vue-test-plugin)
+[![Coverage Status](https://coveralls.io/repos/github/nidkil/vue-test-plugin/badge.svg?branch=master)](https://coveralls.io/github/nidkil/vue-test-plugin?branch=master)
 [![Vue 2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 [![Vue CLI 3](https://img.shields.io/badge/vue%20cli-3-brightgreen.svg)](https://cli.vuejs.org/)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)

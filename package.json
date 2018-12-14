@@ -26,13 +26,11 @@
   "scripts": {
     "serve": "vue-cli-service serve --open",
     "test:unit": "vue-cli-service test:unit",
-    "coverage": "npm run test -- --coverage",
-    "coveralls": "npm run coverage && cat ./coverage/lcov.info | coveralls",
+    "coverage": "vue-cli-service test:unit --coverage",
+    "coveralls": "npm run coverage && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
     "lint": "vue-cli-service lint -c .eslintrc.js --format codeframe plugin src tests",
     "lint:fix": "vue-cli-service lint -c .eslintrc.js --fix --format codeframe plugin src tests",
     "lint:error-only": "vue-cli-service lint -c .eslintrc.js --fix --quiet --format codeframe plugin src tests",
-    "*** REMARK ***": "The following command is not working yet :-(",
-    "lint:check": "vue-cli-service lint --print-config .eslintrc.js | eslint-config-prettier-check",
     "cz:commit": "git cz",
     "cz:retry": "git cz --retry",
     "cl": "commitlint",
@@ -45,6 +43,8 @@
     "release": "release-it --verbose"
   },
   "dependencies": {
+    "vue": "^2.5.21",
+    "vue-template-compiler": "^2.5.21"
   },
   "peerDependencies": {
     "vue": "^2.5.21",
@@ -64,6 +64,7 @@
     "babel-jest": "^23.6.0",
     "babel-plugin-module-resolver": "^3.1.1",
     "commitlint": "^7.2.1",
+    "coveralls": "^3.0.2",
     "cz-conventional-changelog": "^2.1.0",
     "eslint": "^5.8.0",
     "eslint-config-prettier": "^3.3.0",

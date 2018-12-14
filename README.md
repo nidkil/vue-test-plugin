@@ -25,7 +25,7 @@ I am developing a Vue 2 plugin. During this process I ran into some hiccups gett
 Nothing to fancy, but it might be of help to others setting up a project for a Vue 2 plugin, so I will make it generally available. Enjoy!
 
 <a name="toc">
-  <summary><strong>Table of Contents</strong> (click to expand)</summary>
+  <strong>Table of Contents</strong>
 
 <!-- toc -->
 

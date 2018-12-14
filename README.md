@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="./public/vue-test-plugin-log" alt="vue-test-plugin logo" width="200"/>
+  <img src="./public/vue-test-plugin-log.png" alt="vue-test-plugin logo" width="200"/>
 </p>
 <p align="center" style="font-size: 2.0em"><b>vue-test-plugin</b></p>
 <p align="center" style="font-size: 0.5em">Simple Vue 2 plugin to test Vue CLI 3 service build functionality</p>
 
-[![NPM version](https://img.shields.io/npm/v/vue-test-plugin.svg)](https://www.npmjs.com/package/vue-test-plugin)
+[![Build status](https://travis-ci.com/nidkil/vue-test-plugin.svg?branch=master)](https://travis-ci.com/nidkil/vue-test-plugin)
 [![Vue 2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 [![Vue CLI 3](https://img.shields.io/badge/vue%20cli-3-brightgreen.svg)](https://cli.vuejs.org/)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
@@ -24,10 +24,20 @@ I am developing a Vue 2 plugin. During this process I ran into some hiccups gett
 Nothing to fancy, but it might be of help to others setting up a project for a Vue 2 plugin, so I will make it generally available. Enjoy!
 
 <a name="toc">
-  <details>
-    <summary><strong>Table of Contents</strong> (click to expand)</summary>
-      <!-- toc -->
-  </details>
+  <summary><strong>Table of Contents</strong> (click to expand)</summary>
+
+<!-- toc -->
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Tips & tricks](#tips--tricks)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [Support & brag about us](#support--brag-about-us)
+- [Author](#author)
+
+<!-- tocstop -->
+
 </a>
 
 ## Installation

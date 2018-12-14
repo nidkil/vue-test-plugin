@@ -1,12 +1,11 @@
 <p align="center">
-  <img src="./public/vue-test-plugin-log.png" alt="vue-test-plugin logo" width="200"/>
+  <img src="https://raw.githubusercontent.com/nidkil/vue-test-plugin/master/public/vue-test-plugin-logo.png" alt="vue-test-plugin logo" width="200"/>
 </p>
 <p align="center" style="font-size: 2.0em"><b>vue-test-plugin</b></p>
 <p align="center" style="font-size: 0.5em">Simple Vue 2 plugin to test Vue CLI 3 service build functionality</p>
 
 [![Build status](https://travis-ci.com/nidkil/vue-test-plugin.svg?branch=master)](https://travis-ci.com/nidkil/vue-test-plugin)
 [![Coverage Status](https://coveralls.io/repos/github/nidkil/vue-test-plugin/badge.svg)](https://coveralls.io/github/nidkil/vue-test-plugin)
-[![Coverage Status](https://coveralls.io/repos/github/nidkil/vue-test-plugin/badge.svg?branch=master)](https://coveralls.io/github/nidkil/vue-test-plugin?branch=master)
 [![Vue 2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 [![Vue CLI 3](https://img.shields.io/badge/vue%20cli-3-brightgreen.svg)](https://cli.vuejs.org/)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
@@ -46,16 +45,16 @@ Nothing to fancy, but it might be of help to others setting up a project for a V
 
 ### Local
 
-Install as a `dependency` using [npm](https://www.npmjs.com/):
+Install directly from Github as a `dependency` using [npm](https://www.npmjs.com/):
 
 ```bash
-npm install --save vue-test-plugin
+npm install --save git+https://git@github.com/nidkil/vue-test-plugin.git
 ```
 
-Or install using [yarn](https://yarnpkg.com):
+Or if you need SSH:
 
 ```bash
-yarn add vue-test-plugin
+npm install --save git+ssh://git@github.com/nidkil/vue-test-plugin.git
 ```
 
 [Go to Table of Contents](#toc)
@@ -79,18 +78,12 @@ Below the most important directories are explained.
 
 [Go to Table of Contents](#toc)
 
-### Compiles and hot-reloads for development
+### Compile and hot-reload for development
 
 Start the development server with the following npm command. It will automatically open the browser.
 
 ```
 npm run serve
-```
-
-Or using yarn.
-
-```
-yarn serve
 ```
 
 To see debugging output from the plugin open the browser development tools (`ctrl+shift+i`). You will see a number of debugging messages that display the name of the plugin and version number. It will also display the same information on the page of the example app.
@@ -112,22 +105,16 @@ To compile the plugin run the following command.
 npm run build
 ```
 
-### Run the tests
-
-```
-npm run test
-```
-
-### Lints and fixes files
-
-```
-npm run lint
-```
-
-### Run your unit tests
+### Run the unit tests
 
 ```
 npm run test:unit
+```
+
+### Lint and fix files
+
+```
+npm run lint:fix
 ```
 
 [Go to Table of Contents](#toc)
@@ -136,7 +123,7 @@ npm run test:unit
 
 ### Setting aliases
 
-With the babel `module_resolver` plugin you can set aliases for directories so that you do not have to use complicated import paths, i.e. ../../src/<module-name>.
+With the babel `module_resolver` plugin you can set aliases for directories, so that you do not have to use complicated import paths, i.e. ../../src/<module-name>.
 
 Install the `babel-plugin-module-resolver` plugin module using npm.
 
@@ -190,7 +177,7 @@ module.exports = {
 }
 ```
 
-**Pro tip 1**: If you are using Webstorm you still need the `webpack.config.js` file for the aliases to be recognized. Just add the `webpack.config.js` file to the project root directory. Here are the aliases of the `webpack.config.js` file.
+**Pro tip 2**: If you are using Webstorm you still need the `webpack.config.js` file for the aliases to be recognized. Just add the `webpack.config.js` file to the project root directory. Here are the aliases of the `webpack.config.js` file.
 
 ```js
 const path = require('path')

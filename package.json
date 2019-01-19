@@ -74,8 +74,8 @@
     "jsdoc": "^3.5.5",
     "markdown-toc": "^1.2.0",
     "prettier": "^1.15.3",
-    "release-it": "^8.4.2",
-    "vue-build-helper": "^0.0.5"
+    "release-it": "^10.0.0",
+    "vue-build-helper": "^0.1.12"
   },
   "config": {
     "commitizen": {

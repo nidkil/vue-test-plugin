@@ -69,7 +69,7 @@
     "eslint": "^5.8.0",
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-prettier": "^3.0.0",
-    "eslint-plugin-vue": "^5.0.0-0",
+    "eslint-plugin-vue": "^6.2.2",
     "husky": "^1.2.0",
     "jsdoc": "^3.5.5",
     "markdown-toc": "^1.2.0",
